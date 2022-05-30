@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="cssweb.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- this linke used to display the icon of social media data-->
+    
+
+      <title>Home</title>
+   </head>
+
+   <body>
+<header>
+
+    <div id= "div1"><!--first div containt the logo and  text -->
+         <img src="four.png" alt="Four logo" width="170" height="170" >
+        <p>Laxury Hotel</p>
+    </div>
+    <nav id ="nav2"><!--navigation links, to other documents.  -->
+        <a class="active" href="home.html">Home</a>
+        <a href="Accommodation.html">Accommodation</a>
+<a href="serv.html">Additional Services </a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+	
+
+</header>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="gallery 1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="gallery 2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="gallery 3.jpg" style="width:100%">
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+      <main id= "main-1" > <!-- The main content of the body of a document -->
+          <section class="section1" > <!-- Begin section 1 -->
+          <h1><center>Welcome to Four Hotel</center> </h1> <!--section title -->
+<p style=" color:white; padding:100px 100px; background-image: url('https://travelsort.com/wp-content/uploads/2020/06/Top-20-Reopening-US-Hotels-with-Swimming-Pools.jpg');background-size:100%;" ><strong>Located in Jeddah, a 7-minute walk from Jeddah Corniche, Four Hotel has accommodations with a restaurant,<br> free private parking, a fitness center, and a terrace. This 5-star hotel offers room service.<br>The property provides an outdoor pool, a 24-hour front desk, and free WiFi is available .<br><br><br><br><br><br></strong></p><br>
+
+          <aside class="aside"> <!-- begin aside -->
+                <details> <!-- first news -->
+                  <summary> The Definitive Golf Experience</summary> <!-- short summmary about the news -->
+                   <p> As our guest, enjoy special rates at The Allegria golf course, a 40-minute drive from the property. Designed by Greg Norman, The Allegria is one of the premier golf courses worldwide boasting an 18-hole, par-72 parkland-style course. The course is playable for golfers with varying experience levels, from beginners to accomplished golfers. Enjoy a post-game drink or bite at the clubhouse offering a full-service restaurant or enjoy a stroll through their golfers’ boutique shop.</p>
+                </details><br><br>
+
+                <details> <!-- Second news -->
+                  <summary> Four Spa</summary>
+                   <p> Neutral tones and sandy hues embodying the desert by day—contrasted by cool and comforting nightshades—resonate with Jeddah's natural beauty, allowing you to fully relax and unwind as you immerse yourself in your soothing surroundings.</p>
+                </details><br>
+              </aside>
+           <article class="artical1"><!--Begin artical 1 -->
+              <div id="div3">
+<br><p><strong>On the banks of the Red Sea, the city of Jeddah is the most beautiful city in Saudi Arabia  A melting pot of history, culture, and diversity, the city is ideal for both business and leisure.</strong>
+               <br> <br>  Like the city itself, Four Hotel offers a delightful series of contrasts, combining advanced technology and modern design with local flavors and flair. <br>
+With sweeping panoramas of the Redsea, Jeddah's beauty and history are always in sight from your luxury hotel accommodation. During your stay downtown, embark on culinary adventures at the city's finest restaurants, enjoy the fresh air at our rooftop poolside restaurant and pamper yourself at Four Spa.
+<br>
+Conveniently located this luxury city hotel is the ideal location for business events, consisting of 845 square meters (9,100 square feet) in addition to 450 square meters (4,800 square feet) of outdoor space dedicated to meetings and conventions. The space comprises 10 meeting rooms including a ballroom and offers spectacular Redsea views.</p>
+             
+              </div>
+              <div id="div4"><!-- short info about the 4 hotel -->
+               <br> <img src="4spa.jpg" alt="Spa image" width="330" height="330" >
+             </div>
+           </article>    
+             <article class="artical2"><!--Begin artical 2 -->
+            <br>  <h2 style= "font-family: Noto Serif Regular ">shelter from the noise of everyday life</h2>
+              <br><p>Staying at Four Hotel is not simply about enjoying a -5star experience. Whether you are visiting for a corporate engagement or family holiday, you will live a life of luxury, opulence, and grandeur combined with impeccable VIP services that will fulfill your desires.</p>
+           </article>
+          </section>
+
+          
+             
+      </main>
+
+       <!-- the footer contains the social data -->
+
+        <footer class="footer" >
+          <div class="social"  >
+             <a href = "#" ><i class="fab fa-instagram"></i></a>
+              <a href = "#"><i class="fab fa-snapchat"></i></a>
+               <a href = "#"><i class="fab fa-twitter"></i></a>
+                <a href = "#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+            <ul> <!-- unorder list-->
+            <li><a href="terms.html">Terms And Conditions</a></li>
+          </ul>
+        <p class="copyright">©FourHotel </p>
+      </footer>
+ </body>
+</html> 
+
+

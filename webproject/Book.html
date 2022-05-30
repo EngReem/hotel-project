@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="cssweb.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- this linke used to display the icon of social media data-->
+    
+      <title>Book</title>
+<script>
+
+	function verifyname() {
+	var name = document.getElementById("guestname").value;
+    var email = document.getElementById("guestemail").value;
+    var num = document.getElementById("guestelephone").value;
+	var adult = document.getElementById("adults").value;
+    var child = document.getElementById("children").value;
+	var chin = document.getElementById("checkin").value;
+    var chout = document.getElementById("checkout").value;
+
+if(name== "") {
+ 	alert( "Please check if your name is valid");
+ 	return false;
+	}
+if(name.length < 8) {
+ 	alert( "Please check if your name is valid");
+ 	return false;
+	}
+if( email== "") {
+ 	alert( "Please check if your email is valid");
+ 	return false;
+	}
+
+if(email.indexOf("@") == -1) {
+ 	alert( "Please check if your email is valid");
+ 	return false;
+	}
+
+if(num.length < 10) {
+ 	alert( "Please check if your mobile is valid");
+ 	return false;
+	}
+if( adult > 10 || adult < 0 ) {
+ 	alert( "number of adults must be between 0 to 10");
+ 	return false;
+	}      
+if( child > 10 || child < 0 ) {
+ 	alert( "number of children must be between 0 to 10");
+ 	return false;
+	}      
+if(chin == "") {
+ 	alert( "Please enter the date of check-in");
+ 	return false;
+	}
+if(chout == "") {
+ 	alert( "Please enter the date of check-out");
+ 	return false;
+	}
+else {
+ 	alert("successfully registered");}}
+
+</script>
+   </head>
+
+   <body>
+
+<header>
+
+    <div id= "div1"><!--first div containt the logo and  text -->
+         <img src="four.png" alt="Four logo" width="170" height="170" >
+        <p>Laxury Hotel</p>
+    </div>
+    <nav id ="nav2"><!--navigation links, to other documents.  -->
+        <a class="active" href="home.html">Home</a>
+        <a href="Accommodation.html">Accommodation</a>
+<a href="serv.html">Additional Services </a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+	
+</header>
+
+<form method="post" action="insert.php" onsubmit ="return verifyname()" >
+<div class="reservation" style="max-width:1532px;" id="rooms"> 
+    <h2>Reservations</h2> 
+    <p><br>Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.</p> <br>
+  </div> 
+                      <div class="section"> 
+  <label for="guestname" class="field-label">Please Enter Your Name</label> 
+  <label for="guestname" class="field prepend-icon"> 
+    <input type="text" name="guestname" id="guestname" class="gui-input" placeholder="Ahmed Alghamde"> 
+    <span class="field-icon"><i class="fa fa-user"></i></span>   
+  </label> 
+</div> 
+                
+<div class="frm-row"> 
+  <div class="section colm colm6"> 
+    <label for="guestemail" class="field-label">Email Address</label> 
+    <label for="guestemail" class="field prepend-icon"> 
+      <input type="email" name="guestemail" id="guestemail" class="gui-input" placeholder="Ahmed@something.com"> 
+      <span class="field-icon"><i class="fa fa-envelope"></i></span>   
+    </label> 
+  </div> 
+    
+  <div class="section colm colm6"> 
+    <label for="guestelephone" class="field-label">Telephone / Mobile</label> 
+    <label for="guestelephone" class="field prepend-icon"> 
+      <input type="text" name="guestelephone" id="guestelephone" class="gui-input" placeholder="0500000000"> 
+      <span class="field-icon"><i class="fa fa-phone-square"></i></span>   
+    </label> 
+  </div> 
+</div> 
+  
+<div class="frm-row"> 
+  <div class="section colm colm6"> 
+    <label for="adults" class="field-label">Number of Adults</label> 
+    <label for="adults" class="field prepend-icon"> 
+      <input type="number" id="adults" name="adults" class="gui-input" placeholder="Number of adults"> 
+      <span class="field-icon"><i class="fa fa-users"></i></span>   
+    </label> 
+  </div> 
+    
+  <div class="section colm colm6"> 
+    <label for="children" class="field-label">Number of Children</label> 
+    <label for="children" class="field prepend-icon"> 
+      <input type="number" id="children" name="children" class="gui-input" placeholder="Number of children"> 
+      <span class="field-icon"><i class="fa fa-users"></i></span>   
+    </label> 
+  </div> 
+</div> 
+  
+
+<div class="frm-row"> 
+  <div class="section colm colm6"> 
+    <label for="checkin" class="field-label">Check-in Date</label> 
+    <label for="checkin" class="field prepend-icon"> 
+      <input type="date" id="checkin" name="checkin" class="gui-input"  placeholder="mm/dd/yyyy"> 
+      <span class="field-icon"><i class="fa fa-calendar"></i></span>   
+    </label> 
+  </div> 
+    
+  <div class="section colm colm6"> 
+    <label for="checkout" class="field-label">Check-out Date</label> 
+    <label for="checkout" class="field prepend-icon"> 
+      <input type="date" id="checkout" name="checkout" class="gui-input" placeholder="mm/dd/yyyy"> 
+      <span class="field-icon"><i class="fa fa-calendar"></i></span>   
+    </label> 
+  </div> 
+</div> 
+  
+  
+<div class="section"> 
+  <label for="comment" class="field-label">Anything else we should know about?</label> 
+  <label for="comment" class="field prepend-icon"> 
+    <textarea class="gui-textarea" id="comment" name="comment"
+
+placeholder="Let us know about any special accommodation needs"></textarea> 
+    <span class="field-icon"><i class="fa fa-comments"></i></span> 
+    <span class="input-hint">  
+      <p><strong>Please:</strong> Be as descriptive as possible </p>
+    </span>    
+  </label> 
+</div> 
+<div class="smart-wrap"> 
+  <div class="smart-forms smart-container wrap-2"> 
+    
+    <div class="form-header header-primary"> 
+      <h4><i class="fa fa-calendar"></i>Make Room Reservations in Minutes</h4> 
+    </div> 
+      
+
+      <div class="form-body">                                         
+           
+      </div> 
+      
+      <div class="form-footer"> <center>
+        <button type="submit" class="button btn-primary">Confirm Booking</button> 
+        <button type="reset" class="button">Cancel</button> </center>
+        
+      </div> 
+        
+    </form> 
+
+      
+  </div> 
+</div>
+
+       <!-- the footer contains the social data -->
+
+        <footer class="footer" >
+          <div class="social"  >
+             <a href = "#" ><i class="fab fa-instagram"></i></a>
+              <a href = "#"><i class="fab fa-snapchat"></i></a>
+               <a href = "#"><i class="fab fa-twitter"></i></a>
+                <a href = "#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+            <ul> <!-- unorder list-->
+            <li><a href="terms.html">Terms And Conditions</a></li>
+          </ul>
+        <p class="copyright">©FourHotel </p>
+      </footer>
+ </body>
+</html> 
